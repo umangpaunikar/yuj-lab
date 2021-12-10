@@ -1,0 +1,15 @@
+<div class="product-container">
+  <h2>{{ productConfigs.categoryName }}</h2>
+  <!-- {{ productConfigs | json }} -->
+  <div class="product-wrap">
+    <div class="card" *ngFor="let product of productConfigs.products">
+      <div class="d-flex justify-content-center p-3 img">
+        <img [src]="product.img" class="rounded" alt="..." />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}a</h5>
+        <a href="#" class="card-link">{{ product.shortDes }}</a>
+      </div>
+    </div>
+  </div>
+</div>
