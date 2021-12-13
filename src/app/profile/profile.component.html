@@ -2,21 +2,21 @@
 {{ personName }}
 <img [src]="profileUrl" alt="" width="100px" height="100px" /> -->
 <!-- {{ productProfile | json }} -->
-<div class="card" style="width: 18rem">
-  <img [src]="productConfigs.img" class="card-img-top" alt="..." />
+<div class="card">
+  <img [src]="userProfile.img" class="card-img-top" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">{{ productConfigs.name }}</h5>
+    <h5 class="card-title">{{ userProfile.name }}</h5>
     <p class="card-text">
-      {{ productConfigs.shortDes }}
+      {{ userProfile.shortDes }}
     </p>
   </div>
   <ul
     class="list-group list-group-flush"
-    *ngFor="let feature of productConfigs.productFeature"
+    *ngFor="let feature of userProfile.productFeature"
   >
     <li class="list-group-item">{{ feature }}</li>
   </ul>
   <div class="card-footer">
-    <a href="#" class="card-link">{{ productConfigs.linkTitle }}</a>
+    <a href="#" class="card-link">{{ userProfile.linkTitle }}</a>
   </div>
 </div>

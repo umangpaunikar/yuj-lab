@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'yuj-list-profile',
@@ -6,26 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-profile.component.scss'],
 })
 export class ListProfileComponent implements OnInit {
-  public productProfile = [
+  public userProfile = [
     {
-      name: 'Build',
+      name: 'User 1',
       img: 'assets/profile.jpeg',
       shortDes:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum obcaecati nemo numquam facere hic similique consequuntur culpa modi reiciendis molestiae.',
-      linkTitle: 'View all product',
+      linkTitle: 'View',
       productFeature: ['Cloud fire store', 'Authentication'],
     },
     {
-      name: 'Build',
+      name: 'User 2',
       img: 'assets/profile.jpeg',
       shortDes:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum obcaecati nemo numquam facere hic similique consequuntur culpa modi reiciendis molestiae.',
-      linkTitle: 'View all product',
+      linkTitle: 'View',
       productFeature: ['File Monitoring', 'Google Analytics'],
     },
   ];
 
-  constructor() {}
+  constructor(private productSrv: ProductService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // let prod = this.productSrv.getProduct();
+    // console.log(prod);
+  }
 }

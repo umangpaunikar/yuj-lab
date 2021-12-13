@@ -9,7 +9,7 @@ export class ProfileComponent implements OnInit {
   // @Input()
   // personName!: string;
 
-  @Input() productConfigs!: any;
+  @Input() userProfile!: any;
 
   // profileUrl = 'assets/profile.jpeg';
 

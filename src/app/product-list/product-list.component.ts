@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'yuj-product-list',
@@ -79,7 +80,10 @@ export class ProductListComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private prodService: ProductService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let prod = this.prodService.getProduct();
+    console.log(prod);
+  }
 }
