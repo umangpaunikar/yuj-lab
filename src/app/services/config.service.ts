@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class ProductService {
-  baseUrl = 'assets/data/product.json';
+export class ConfigService {
+  baseUrl = 'assets/data/config.json';
   constructor(private http: HttpClient) {}
 
-  getProducts() {
+  getConfig() {
     return this.http.get(this.baseUrl);
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-declare let ONE3D: any;
+// declare let ONE3D: any;
 @Component({
   selector: 'yuj-root',
   templateUrl: './app.component.html',
