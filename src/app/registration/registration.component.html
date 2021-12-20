@@ -1,14 +1,43 @@
 <h5>Registration</h5>
 <div class="row justify-content-center">
   <div class="col-4">
-    <form>
+    <!-- {{ registerForm.value | json }}
+    {{ registerForm.value.firstName }} -->
+    <form [formGroup]="registerForm">
       <div class="mb-3">
         <label for="firstName" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="firstName" />
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          formControlName="firstName"
+        />
       </div>
       <div class="mb-3">
         <label for="lastName" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="lastName" />
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          formControlName="lastName"
+          required
+        />
+        <!-- <div class="form-error">
+          <p *ngIf="registerForm.controls.lastName.valid">Last Name Required</p>
+        </div> -->
+        <!-- <span
+          >valid ?{{ registerForm.controls.lastName.valid }}
+          <br />
+          invalid?{{ registerForm.controls.lastName.invalid }}
+          <br />
+          pristine ?{{ registerForm.controls.lastName.pristine }}
+          <br />
+          dirty?{{ registerForm.controls.lastName.dirty }}
+          <br />
+          touched ?{{ registerForm.controls.lastName.touched }}
+          <br />
+          untouched?{{ registerForm.controls.lastName.untouched }}
+        </span> -->
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email address</label>
@@ -16,12 +45,17 @@
           type="email"
           class="form-control"
           id="email"
-          aria-describedby="emailHelp"
+          formControlName="email"
         />
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" />
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          formControlName="password"
+        />
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

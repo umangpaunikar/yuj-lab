@@ -1,0 +1,31 @@
+<h5>Ticket</h5>
+<h6>Template Driven Form</h6>
+<form #supportForm="ngForm">
+  {{ supportForm.value | json }}
+  <div class="mb-3">
+    <label for="ticketName" class="form-label">Ticket Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="ticketName"
+      name="ticketName"
+      ngModel
+    />
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea
+      id="description"
+      class="form-control"
+      name="description"
+      placeholder="description"
+      ngModel
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="priority" class="form-label">Priority</label>
+    <select class="form-select" id="priority" name="priority" ngModel>
+      <option *ngFor="let priority of severity">{{ priority }}</option>
+    </select>
+  </div>
+</form>

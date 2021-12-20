@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { SupportTicketComponent } from './support-ticket/support-ticket.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'ticket',
+    component: SupportTicketComponent,
   },
   {
     path: '**',

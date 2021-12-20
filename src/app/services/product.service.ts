@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ProductService {
-  baseUrl = 'assets/data/product.json';
+  // baseUrl = 'assets/data/product.json';
+  baseUrl = 'http://localhost:5000/api/product';
   constructor(private http: HttpClient) {}
 
   getProducts() {
