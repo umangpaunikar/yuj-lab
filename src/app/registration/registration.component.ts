@@ -8,9 +8,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegistrationComponent implements OnInit {
   registerForm: any;
+  myLoginData: any;
   constructor() {}
 
   ngOnInit(): void {
+    this.myLoginData = JSON.parse(localStorage.getItem('loginInfo') || '');
+
     this.registerForm = new FormGroup({
       firstName: new FormControl('Umang'),
       lastName: new FormControl('', Validators.required),

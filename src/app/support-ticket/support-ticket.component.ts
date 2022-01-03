@@ -6,8 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./support-ticket.component.scss'],
 })
 export class SupportTicketComponent implements OnInit {
+  supportModule = {
+    ticketName: '',
+    description: '',
+    priority: '',
+  };
   severity = ['High', 'Medium', 'Low'];
   constructor() {}
 
   ngOnInit(): void {}
+  submitSupportForm() {
+    console.log(this.supportModule);
+  }
 }

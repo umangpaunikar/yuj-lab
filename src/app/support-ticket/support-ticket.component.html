@@ -9,8 +9,9 @@
       class="form-control"
       id="ticketName"
       name="ticketName"
-      ngModel
+      [(ngModel)]="supportModule.ticketName"
     />
+    <!-- <div *ngIf="supportForm.controls.ticketName"></div> -->
   </div>
   <div class="mb-3">
     <label for="description" class="form-label">Description</label>
@@ -19,13 +20,21 @@
       class="form-control"
       name="description"
       placeholder="description"
-      ngModel
+      [(ngModel)]="supportModule.description"
     ></textarea>
   </div>
   <div class="mb-3">
     <label for="priority" class="form-label">Priority</label>
-    <select class="form-select" id="priority" name="priority" ngModel>
+    <select
+      class="form-select"
+      id="priority"
+      name="priority"
+      [(ngModel)]="supportModule.priority"
+    >
       <option *ngFor="let priority of severity">{{ priority }}</option>
     </select>
   </div>
+  <button type="submit" class="btn btn-primary" (click)="submitSupportForm()">
+    Submit
+  </button>
 </form>

@@ -6,17 +6,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
-  // @Input()
-  // personName!: string;
+  @Input()
+  personName!: string;
 
   @Input() userProfile!: any;
 
-  // profileUrl = 'assets/profile.jpeg';
+  profileUrl = 'assets/profile.jpeg';
 
-  // @Output() loginDetails = new EventEmitter();
-  // constructor() {}
+  @Output() loginDetails = new EventEmitter();
+  constructor() {}
 
   ngOnInit(): void {
-    // this.loginDetails.emit('Hello From Profile');
+    this.loginDetails.emit('Hello From Profile');
   }
 }

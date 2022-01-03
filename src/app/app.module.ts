@@ -19,6 +19,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SupportTicketComponent } from './support-ticket/support-ticket.component';
+import { RxUsageComponent } from './rx-usage/rx-usage.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { SupportTicketComponent } from './support-ticket/support-ticket.componen
     HomeComponent,
     PageNotFoundComponent,
     SupportTicketComponent,
+    RxUsageComponent,
   ],
   imports: [
     BrowserModule,

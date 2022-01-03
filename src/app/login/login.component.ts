@@ -18,5 +18,6 @@ export class LoginComponent implements OnInit {
   }
   onLoginFormSubmit() {
     console.log(this.loginForm);
+    localStorage.setItem('loginInfo', JSON.stringify(this.loginForm.value));
   }
 }
